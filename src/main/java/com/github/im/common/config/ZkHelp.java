@@ -36,10 +36,10 @@ public class ZkHelp {
 	public ZkClient client = null;
 	
 	// zookeeper集群地址 开发环境
-	public String zooKeeperCluster = "172.18.22.11:2181,172.18.22.12:2181,172.18.22.13:2181";
-	// public String zooKeeperCluster = "172.18.22.56:2181,172.18.22.57:2181,172.18.22.58:2181";  // 工作圈
+	// public String zooKeeperCluster = "172.18.22.11:2181,172.18.22.12:2181,172.18.22.13:2181";
+	// public String zooKeeperCluster = "172.18.22.56:2181,172.18.22.57:2181,172.18.22.58:2181";  // 
 	// zookeeper集群地址 开发环境
-	//public String zooKeeperCluster = "127.0.0.1:2181";
+	public String zooKeeperCluster = "127.0.0.1:2181";
 	
 	public int sessionTimeout = 10000;
 	public int connectionTimeout = 10000;
