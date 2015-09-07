@@ -30,7 +30,6 @@ import org.apache.zookeeper.data.Stat;
         if(lock != null)
             lock.unlock();
     }
- * @author xueliang
  *
  */
 public class DistributedLock implements Lock, Watcher{
