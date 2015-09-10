@@ -111,6 +111,7 @@ public class ZkHelp {
 	public void subscribeDataChanges(String path, IZkDataListener listener) {
 		if (!checkEnv(path))
 			path = environmentFlag + path;
+		logger.info("path:{}", path);
 		client.subscribeDataChanges(path, listener);
 	}
 
