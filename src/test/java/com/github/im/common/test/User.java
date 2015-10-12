@@ -1,9 +1,6 @@
 package com.github.im.common.test;
 
-/**
- * @author haoxw
- * @since  2011年4月30日
- */
+
 public class User {
 	private int id;
 	private String name;
