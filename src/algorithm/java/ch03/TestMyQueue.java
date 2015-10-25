@@ -3,6 +3,8 @@ package ch03;
 public class TestMyQueue {
 	public static void main(String[] args) {
 		MyCycleQueue mq = new MyCycleQueue(4);
+		
+		
 		mq.insert(23);
 		mq.insert(45);
 		mq.insert(13);
