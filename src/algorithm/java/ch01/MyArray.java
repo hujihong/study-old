@@ -2,7 +2,7 @@ package ch01;
 
 public class MyArray {
 	private long[] arr;
-	//±íÊ¾ÓÐÐ§Êý¾ÝµÄ³¤¶È
+	//è¡¨ç¤ºæœ‰æ•ˆæ•°æ®çš„é•¿åº¦
 	private int elements;
 	
 	public MyArray() {
@@ -14,7 +14,7 @@ public class MyArray {
 	}
 	
 	/**
-	 * Ìí¼ÓÊý¾Ý
+	 * æ·»åŠ æ•°æ®
 	 */
 	public void insert(long value) {
 		arr[elements] = value;
@@ -22,7 +22,7 @@ public class MyArray {
 	}
 	
 	/**
-	 * ÏÔÊ¾Êý¾Ý
+	 * æ˜¾ç¤ºæ•°æ®
 	 */
 	public void display() {
 		System.out.print("[");
@@ -33,7 +33,7 @@ public class MyArray {
 	}
 	
 	/**
-	 * ²éÕÒÊý¾Ý
+	 * æŸ¥æ‰¾æ•°æ®
 	 */
 	public int search(long value) {
 		int i;
@@ -52,7 +52,7 @@ public class MyArray {
 	}
 	
 	/**
-	 * ²éÕÒÊý¾Ý£¬¸ù¾ÝË÷ÒýÀ´²é
+	 * æŸ¥æ‰¾æ•°æ®ï¼Œæ ¹æ®ç´¢å¼•æ¥æŸ¥
 	 */
 	public long get(int index) {
 		if(index >= elements || index < 0) {
@@ -63,7 +63,7 @@ public class MyArray {
 	}
 	
 	/**
-	 * É¾³ýÊý¾Ý
+	 * åˆ é™¤æ•°æ®
 	 */
 	public void delete(int index) {
 		if(index >= elements || index < 0) {
@@ -77,7 +77,7 @@ public class MyArray {
 	}
 	
 	/**
-	 * ¸üÐÂÊý¾Ý
+	 * æ›´æ–°æ•°æ®
 	 */
 	public void change(int index, int newvalue) {
 		if(index >= elements || index < 0) {

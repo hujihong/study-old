@@ -17,6 +17,22 @@ public class InsertSort {
 		}
 	}
 
+	
+	
+	public static void insertion_sort(long[] unsorted) {
+        for (int i = 1; i < unsorted.length; i++) {
+            if (unsorted[i - 1] > unsorted[i]) {
+                long temp = unsorted[i];
+                int j = i;
+                while (j > 0 && unsorted[j - 1] > temp) {
+                    unsorted[j] = unsorted[j - 1];
+                    j--;
+                }
+                unsorted[j] = temp;
+            }
+        }
+    }
+	
 	/**
 	 * 插入排序
 	 * 

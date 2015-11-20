@@ -1,13 +1,19 @@
-package ch04;
+package ch05;
+
+import ch04.Node;
+
 /*
- * 链表，相当于火车
+ * 双端链表
  */
-public class LinkList {
+public class FirstLastLinkList {
 	//头结点
 	private Node first;
+	//尾结点
+	private Node last;
 	
-	public LinkList() {
+	public FirstLastLinkList() {
 		first = null;
+		last = null;
 	}
 	
 	/**
@@ -15,8 +21,24 @@ public class LinkList {
 	 */
 	public void insertFirst(long value) {
 		Node node = new Node(value);
+		if(isEmpty()) {
+			last = node;
+		}
 		node.next = first;
 		first = node;
+	}
+	
+	/**
+	 * 插入一个结点，从尾结点进行插入
+	 */
+	public void insertLast(long value) {
+		Node node = new Node(value);
+		if(isEmpty()) {
+			first = node;
+		} else {
+			last.next = node;
+		}
+		last = node;
 	}
 	
 	/**
@@ -24,6 +46,9 @@ public class LinkList {
 	 */
 	public Node deleteFirst() {
 		Node tmp = first;
+		if(first.next == null) {
+			last = null;
+		}
 		first = tmp.next;
 		return tmp;
 	}
@@ -75,5 +100,12 @@ public class LinkList {
 		}
 		return current;
 		
+	}
+	
+	/**
+	 * 判断是否为空
+	 */
+	public boolean isEmpty() {
+		return (first == null);
 	}
 }

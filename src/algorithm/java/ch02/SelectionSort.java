@@ -7,9 +7,9 @@ public class SelectionSort {
 		int k = 0;
 		long tmp = 0;
 		// 从头开始
-		for(int i = 0; i < arr.length - 1; i++) {
+		for(int i = 0; i < arr.length -1 ; i++) {
 			k = i;  // k 指向 i
-			for(int j = i; j < arr.length; j++) {
+			for(int j = i; j < arr.length ; j++) {
 				if(arr[j] < arr[k]) {
 					k = j; // 交换
 				}
@@ -19,6 +19,9 @@ public class SelectionSort {
 				arr[i] = arr[k];
 				arr[k] = tmp;
 			}
+			System.out.print( " " + i);
+			TestSort.display(arr);
+			
 		}
 	}
 }
