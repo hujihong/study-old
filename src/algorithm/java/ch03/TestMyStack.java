@@ -3,7 +3,16 @@ package ch03;
 public class TestMyStack {
 	public static void main(String[] args) {
 		// test1();
-		test2();
+		// test2();
+		test3();
+	}
+	
+	public static void test3(){
+		MyStack ms = new MyStack(4);
+		ms.push(23);
+		System.out.println(ms.isEmpty());
+		ms.pop();
+		System.out.println(ms.isEmpty());
 	}
 	
 	public static void test1() {

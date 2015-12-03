@@ -4,6 +4,7 @@ public class TestMyQueue {
 	public static void main(String[] args) {
 		MyCycleQueue mq = new MyCycleQueue(4);
 		
+		System.out.println(mq.isFull());
 		
 		mq.insert(23);
 		mq.insert(45);

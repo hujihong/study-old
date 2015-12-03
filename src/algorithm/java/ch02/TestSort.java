@@ -3,7 +3,7 @@ package ch02;
 public class TestSort {
 	public static void main(String[] args) {
 		long[] arr = new long[5];
-		arr[0] = 34;
+		arr[0] = 15;
 		arr[1] = 23;
 		arr[2] = 2;
 		arr[3] = 1;
@@ -13,8 +13,8 @@ public class TestSort {
 		// System.out.println();
 		System.out.println("====");
 		// InsertSort.sort(arr);
-		// InsertSort.insertion_sort(arr);
-		SelectionSort.sort(arr);
+		InsertSort.insertion_sort(arr);
+		// SelectionSort.sort(arr);
 		// BubbleSort.sort(arr);
 		// InsertSort.sort2(arr);
 		System.out.println("====");

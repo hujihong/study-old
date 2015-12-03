@@ -9,9 +9,11 @@ public class InsertSort {
 		for (int i = 1; i < arr.length; i++) {
 			tmp = arr[i];
 			int j = i;
-			while (j > 0 && arr[j] >= tmp) {
+			long t = arr[j];
+			while (j > 0 && arr[j] > tmp) {
 				arr[j] = arr[j - 1];
 				j--;
+				t = arr[j];
 			}
 			arr[j] = tmp;
 		}
