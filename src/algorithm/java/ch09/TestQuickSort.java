@@ -2,11 +2,13 @@ package ch09;
 
 public class TestQuickSort {
 	public static void main(String[] args) {
-		long[] arr  = new long[10];
-		for(int i = 0; i < 10;i++) {
-			arr[i] = (long) (Math.random() * 99);
-		}
+		// long[] arr  = new long[10];
+//		for(int i = 0; i < 10;i++) {
+//			arr[i] = (long) (Math.random() * 99);
+//		}
 		
+		long[] arr = {96,0,76,34,69,67,21,69,53,36};
+ 		
 		QuickSort.displayArr(arr);
 		
 		QuickSort.sort(arr, 0, arr.length - 1);
