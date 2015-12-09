@@ -21,5 +21,8 @@ public class TestLinkList {
 		node1.display();
 		System.out.println();
 		linkList.display();
+		
+		
+		
 	}
 }
