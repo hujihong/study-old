@@ -51,6 +51,7 @@ public class BitSetDemo {
             }
         }
         System.out.println();
+        System.out.println(2 << 13);
     }
      
     /**
@@ -156,8 +157,9 @@ public class BitSetDemo {
         // BitSetDemo.sortArray();
         // BitSetDemo.simpleExample();
          
-        /**
+       
         //BitSet与Byte数组互转示例
+      /**
         BitSet bitSet = new BitSet();
         bitSet.set(3, true);
         bitSet.set(98, true);
@@ -176,6 +178,7 @@ public class BitSetDemo {
         }
         **/
         
+      /**
         String str = "测试一下";  
         System.out.println(toBitSet(str)); 
         
@@ -192,6 +195,27 @@ public class BitSetDemo {
         for(int i = 0; i < bm.size(); i++) {
         	System.out.println(i + ":" + bm.get(i));
         }
+        **/
+      
+      // flip();
+      BitSet b = new BitSet();
+
+      // Set bit 0 and bit 8 to true.
+      b.set(0);
+      b.set(8);
+     
+      byte[] bs = b.toByteArray();
+      
+      // Convert to byte array.
+      for (byte value : bs) {
+          System.out.println(value);
+      }
+      
+      long[] ls = b.toLongArray();
+      for (long value : ls) {
+        System.out.println(value);
+    }
+      
     }
     
     private static String toBitSet(String str){  
@@ -212,5 +236,17 @@ public class BitSetDemo {
         result += "]";  
         return result;  
     }  
+    
+    public static void flip() {
+      BitSet b = new BitSet();
+
+      // Set this bit.
+      b.set(3);
+      System.out.println(b.get(3));
+
+      // Flip the bit.
+      b.flip(3);
+      System.out.println(b.get(3));
+    }
     
 }
