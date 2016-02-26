@@ -123,8 +123,7 @@ public class BaseDbcpDao {
 		int num = 0;
 		try {
 			int dbindex = dbPool.getDbIndex(dbkey);
-			logger.info("execute sql={},params={},dbkey={}", sql,
-					parameters.toString(), dbkey);
+			logger.info("execute sql={},params={},dbkey={}", sql,parameters.toString(), dbkey + "");
 
 			conn = dbPool.getConn(dbindex);
 			smt = conn.prepareStatement(sql);

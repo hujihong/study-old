@@ -16,15 +16,16 @@
 		<java.version>1.7</java.version>
 	</properties>
 
-
 	<dependencies>
-
+		
+		<!-- 
 		<dependency>
 			<groupId>io.netty</groupId>
 			<artifactId>netty-all</artifactId>
 			<version>5.0.0.Alpha2</version>
 		</dependency>
-
+ -->
+ 
 		<dependency>
 			<groupId>org.jodd</groupId>
 			<artifactId>jodd-core</artifactId>
@@ -109,33 +110,15 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.9</version>
-			<scope>test</scope>
+			<version>4.8.1</version>
+			
 		</dependency>
 		<dependency>
 			<groupId>commons-dbcp</groupId>
 			<artifactId>commons-dbcp</artifactId>
 			<version>1.4</version>
 		</dependency>
-		<dependency>
-			<groupId>com.github.adyliu</groupId>
-			<artifactId>zkclient</artifactId>
-			<version>2.0</version>
-			<exclusions>
-				<exclusion>
-					<artifactId>slf4j-api</artifactId>
-					<groupId>org.slf4j</groupId>
-				</exclusion>
-				<exclusion>
-					<artifactId>slf4j-log4j12</artifactId>
-					<groupId>org.slf4j</groupId>
-				</exclusion>
-				<exclusion>
-					<artifactId>log4j</artifactId>
-					<groupId>log4j</groupId>
-				</exclusion>
-			</exclusions>
-		</dependency>
+
 
 		<dependency>
 			<groupId>com.squareup.okhttp</groupId>
@@ -180,27 +163,40 @@
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>
+
+		<!-- 
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-core</artifactId>
 			<version>1.1.2</version>
 		</dependency>
-
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
 			<version>1.1.2</version>
 		</dependency>
+		 -->
+		 
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>jcl-over-slf4j</artifactId>
 			<version>1.7.12</version>
 		</dependency>
+		
+		<!--  
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>log4j-over-slf4j</artifactId>
 			<version>1.7.12</version>
 		</dependency>
+-->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+
+
 
 		<!-- 微信 -->
 		<dependency>
@@ -337,8 +333,37 @@
 			<version>1.2.4</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.apache.zookeeper</groupId>
+			<artifactId>zookeeper</artifactId>
+			<version>3.4.5</version>
+		</dependency>
 
+		<dependency>
+			<groupId>com.github.adyliu</groupId>
+			<artifactId>zkclient</artifactId>
+			<version>2.0</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>slf4j-api</artifactId>
+					<groupId>org.slf4j</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>slf4j-log4j12</artifactId>
+					<groupId>org.slf4j</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>log4j</artifactId>
+					<groupId>log4j</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
 
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>1.8.2</version>
+		</dependency>
 
 	</dependencies>
 	<build>
