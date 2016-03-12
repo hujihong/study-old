@@ -25,7 +25,7 @@ public class OrgJsonTest {
      * @return
      * @throws JSONException
      */
-    public static String BuildJson() throws JSONException {
+    public static String buildJson() throws JSONException {
 
         // JSON格式数据解析对象
         JSONObject jo = new JSONObject();
@@ -36,15 +36,17 @@ public class OrgJsonTest {
         map1.put("sex", "female");
         map1.put("age", "23");
 
-        Map<String, String> map2 = new HashMap<String, String>();
-        map2.put("name", "Edward");
-        map2.put("sex", "male");
-        map2.put("age", "24");
+//        Map<String, String> map2 = new HashMap<String, String>();
+//        map2.put("name", "Edward");
+//        map2.put("sex", "male");
+//        map2.put("age", "24");
 
-        List<Map> list = new ArrayList<Map>();
-        list.add(map1);
-        list.add(map2);
-
+//        List<Map<String, String>> list = new ArrayList<Map<String, String>>();
+//        list.add(map1);
+//        list.add(map2);
+//        JSONObject joi = JsonHelper.toJSON(list);
+//        System.out.println(joi.toString());
+        
         Employee employee = new Employee();
         employee.setName("wjl");
         employee.setSex("female");
@@ -81,7 +83,7 @@ public class OrgJsonTest {
      * @throws JSONException
      * @throws ParseException
      */
-    public static void ParseJson(String jsonString) throws JSONException,
+    public static void parseJson(String jsonString) throws JSONException,
             ParseException {
 
         JSONObject jo = new JSONObject(jsonString);
@@ -108,9 +110,8 @@ public class OrgJsonTest {
      * @throws ParseException
      */
     public static void main(String[] args) throws JSONException, ParseException {
-        // TODO Auto-generated method stub
-
-        ParseJson(BuildJson());
+       
+        parseJson(buildJson());
     }
 
 }

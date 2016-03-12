@@ -12,7 +12,7 @@ import net.sf.json.JSONObject;
 import net.sf.json.xml.XMLSerializer;  
   
 public class Test {  
-    public static void ConvertXMLtoJSON()  {  
+    public static void convertXMLtoJSON()  {  
         InputStream is = Test.class.getResourceAsStream("/sample.xml");  
        
         String xml;  
@@ -42,7 +42,7 @@ public class Test {
     }  
       
     public static void main(String[] args) {  
-        ConvertXMLtoJSON();  
+        convertXMLtoJSON();  
     }  
     
     /**

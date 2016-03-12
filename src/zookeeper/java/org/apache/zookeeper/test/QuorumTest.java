@@ -414,7 +414,7 @@ public class QuorumTest extends ZKTestCase {
 
         // Wait until all updates return
         sem.tryAcquire(15, TimeUnit.SECONDS);
-        
+        // System.out.println(b);
         // Verify that server is following and has the same epoch as the leader
         Assert.assertTrue("Not following", qu.getPeer(index).peer.follower != null);
         long epochF = (qu.getPeer(index).peer.getActiveServer().getZxid() >> 32L);

@@ -106,7 +106,7 @@ public class AsyncOps {
                 Assert.fail("unexpected interrupt");
             }
             // on the lookout for timeout
-            Assert.assertSame(0L, latch.getCount());
+            Assert.assertSame(0, latch.getCount());
             
             String actual = toString();
             

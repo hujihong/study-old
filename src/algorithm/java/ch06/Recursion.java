@@ -7,7 +7,7 @@ public class Recursion {
 	
 	public static void test() {
 		System.out.println("Hello,World!");
-		test();
+		// test();
 	}
 	
 	public static void test2(int n) {
