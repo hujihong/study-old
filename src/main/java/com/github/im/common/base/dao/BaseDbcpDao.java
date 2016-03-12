@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 
 public class BaseDbcpDao {
 	private final static Logger logger = LoggerFactory.getLogger(BaseDbcpDao.class);
-	public static DbcpPool dbPool = null;
+	private static DbcpPool dbPool = null;
 	private Connection conn = null;
 	private PreparedStatement smt = null;
 	private ResultSet rs = null;
@@ -123,11 +123,12 @@ public class BaseDbcpDao {
 		int num = 0;
 		try {
 			int dbindex = dbPool.getDbIndex(dbkey);
-			logger.info("execute sql={},params={},dbkey={}", sql,parameters.toString(), dbkey + "");
+			logger.info("execute sql={},dbkey={}", sql, dbkey + "");
 
 			conn = dbPool.getConn(dbindex);
 			smt = conn.prepareStatement(sql);
 			if (parameters != null) {
+			  logger.info("execute parameters={}", parameters.toString());
 				for (int i = 0; i < parameters.size(); i++) {
 					smt.setObject(i + 1, parameters.get(i));
 				}
@@ -159,13 +160,13 @@ public class BaseDbcpDao {
 		int[] num ;
 		try {
 			int dbindex = dbPool.getDbIndex(dbkey);
-			logger.info("execute sql={},params={},dbkey={}", sql,
-					parametersList.toString(), dbkey);
+			logger.info("execute sql={},dbkey={}", sql, dbkey);
 
 			conn = dbPool.getConn(dbindex);
 			conn.setAutoCommit(false);
 			smt = conn.prepareStatement(sql);
 			if (parametersList != null) {
+			  logger.info("execute parameters={}", parametersList.toString());
 				//参数个数
 				int paramnum = parametersList.get(0).size();
 				for (int i = 0; i < parametersList.size(); i++) {
@@ -202,12 +203,12 @@ public class BaseDbcpDao {
 		int id = 0;
 		try {
 			int dbindex = dbPool.getDbIndex(dbkey);
-			logger.info("execute sql={},params={},dbkey={}", sql,
-					parameters.toString(), dbkey);
+			logger.info("execute sql={}, dbkey={}", sql, dbkey);
 
 			conn = dbPool.getConn(dbindex);
 			smt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 			if (parameters != null) {
+			  logger.info("execute parameters={}", parameters.toString());
 				for (int i = 0; i < parameters.size(); i++) {
 					smt.setObject(i + 1, parameters.get(i));
 				}
@@ -244,12 +245,12 @@ public class BaseDbcpDao {
 			CallBack callBack) {
 		try {
 			int dbindex = dbPool.getDbIndex(dbkey);
-			logger.info("execute sql={},params={},dbkey={}", sql,
-					parameters.toString(), dbkey);
+			logger.info("execute sql={},dbkey={}", sql, dbkey);
 
 			conn = dbPool.getConn(dbindex);
 			smt = conn.prepareStatement(sql);
 			if (parameters != null) {
+			  logger.info("execute parameters={}", parameters.toString());
 				for (int i = 0; i < parameters.size(); i++) {
 					smt.setObject(i + 1, parameters.get(i));
 				}

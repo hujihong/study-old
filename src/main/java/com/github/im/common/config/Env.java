@@ -30,17 +30,11 @@ public enum Env {
 		return name;
 	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
 
 	public int getIndex() {
 		return index;
 	}
 
-	public void setIndex(int index) {
-		this.index = index;
-	}
 	
 	public static void main(String a[]){
 		System.out.println(Env.TEST.getName());

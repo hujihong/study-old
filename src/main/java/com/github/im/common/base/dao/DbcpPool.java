@@ -1,6 +1,7 @@
 package com.github.im.common.base.dao;
 
 import java.io.UnsupportedEncodingException;
+import java.nio.charset.Charset;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -90,10 +91,9 @@ public class DbcpPool {
 		dataSource = new ArrayList<BasicDataSource>();
 		try {
 			ArrayList<Map<String, String>> list = getAddress(zkPath);
+			BasicDataSource bds = null;
 			for (int i = 0; i < list.size(); i++) {
-				BasicDataSource bds = new BasicDataSource();
 				Map<String, String> addr = (Map<String, String>) list.get(i);
-
 				bds = new BasicDataSource();
 				bds.setDriverClassName("com.mysql.jdbc.Driver");
 				bds.setUrl(addr.get("url").toString());
@@ -126,7 +126,7 @@ public class DbcpPool {
 	 * @return
 	 */
 	private ArrayList<Map<String, String>> getAddress(String zkPath) {
-		String mysqlArray[] = new String(zkHelp.getValue(zkPath)).split(",");
+		String mysqlArray[] = new String(zkHelp.getValue(zkPath), Charset.forName("UTF-8")).split(",");
 		ArrayList<Map<String, String>> list = new ArrayList<Map<String, String>>();
 		for (int i = 0; i < mysqlArray.length; i++) {
 			Map<String, String> addr = new HashMap<String, String>();

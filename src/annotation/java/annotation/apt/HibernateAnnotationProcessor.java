@@ -37,7 +37,7 @@ public class HibernateAnnotationProcessor extends AbstractProcessor {
             Name clazzName = t.getSimpleName();
             //获取类定以前的@Persistent Annotation
             Persistent per = t.getAnnotation(Persistent.class);
-            ps= new PrintStream(new FileOutputStream(clazzName + ".hbm.xml"));
+            ps = new PrintStream(new FileOutputStream(clazzName + ".hbm.xml"));
             ps.println("<?xml version=\"1.0\"?>");
             ps.println("<!DOCTYPE hibernate-mapping PUBLIC");
             ps.println(" \"-//Hibernate/HibernateMapping DTD 3.0//EN\"");

@@ -1,5 +1,6 @@
 package com.github.im.common.config;
 
+import java.nio.charset.Charset;
 import java.util.List;
 
 import org.apache.commons.lang.StringUtils;
@@ -32,7 +33,7 @@ public class ZkHelp {
 	}
 
 	// 环境标志 默认测试环境 test
-	public static String environmentFlag = Env.TEST.getName();
+	public String environmentFlag = Env.TEST.getName();
 	public ZkClient client = null;
 	
 	// zookeeper集群地址 开发环境
@@ -181,7 +182,7 @@ public class ZkHelp {
 			path = environmentFlag + path;
 		boolean b = false;
 		try {
-			client.createEphemeral(path, value.getBytes());
+			client.createEphemeral(path, value.getBytes("UTF-8"));
 			b = true;
 		} catch (Exception e) {
 			logger.error("!!!! register " + path + " in cluster error !!!", e);
@@ -200,21 +201,24 @@ public class ZkHelp {
 	public void setPathData(String path, String value) {
 		if (!checkEnv(path))
 			path = environmentFlag + path;
-		String tmpPath = "";
+		
+		// String tmpPath = "";
+		StringBuffer tmpPath = new StringBuffer();
 		String array[] = path.split("/");
 		int length = array.length;
 		for (int i = 0; i < length; i++) {
 			if (array[i].equals("")) {
 				continue;
 			}
-			tmpPath = tmpPath + "/" + array[i];
+			// tmpPath = tmpPath + "/" + array[i];
+			tmpPath.append("/").append(array[i]);
+			
 			// 节点不存在先创建
-			if (!client.exists(tmpPath)) {
-				client.createPersistent(tmpPath, null);
+			if (!client.exists(tmpPath.toString())) {
+				client.createPersistent(tmpPath.toString(), null);
 			}
 			if (i == length - 1) {
-				client.writeData(tmpPath,
-						value == null ? null : value.getBytes());
+				client.writeData(tmpPath.toString(), value == null ? null : value.getBytes(Charset.forName("UTF-8")));
 			}
 		}
 	}

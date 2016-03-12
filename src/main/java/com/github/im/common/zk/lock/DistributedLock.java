@@ -149,7 +149,8 @@ public class DistributedLock implements Lock, Watcher{
         if(stat != null){
             System.out.println("Thread " + Thread.currentThread().getId() + " waiting for " + root + "/" + lower);
             this.latch = new CountDownLatch(1);
-            this.latch.await(waitTime, TimeUnit.MILLISECONDS);
+            // this.latch.await(waitTime, TimeUnit.MILLISECONDS);
+            this.latch.await();
             this.latch = null;
         }
         return true;
@@ -176,7 +177,7 @@ public class DistributedLock implements Lock, Watcher{
         return null;
     }
      
-    public class LockException extends RuntimeException {
+    public static class LockException extends RuntimeException {
         private static final long serialVersionUID = 1L;
         public LockException(String e){
             super(e);

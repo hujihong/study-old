@@ -14,7 +14,8 @@ public class RouteUtil {
 		return instance;
 	}
 
-	public static final Map<Integer, String> TEST_TABLE_MAP = new HashMap<Integer, String>();
+	private static final Map<Integer, String> TEST_TABLE_MAP = new HashMap<Integer, String>();
+	
 	static {
 		TEST_TABLE_MAP.put(0, "test");
 	}
@@ -25,7 +26,14 @@ public class RouteUtil {
 	}
 	
 	public String getTestTableName(String key) {
-		long i = Math.abs((key.hashCode())) % TEST_TABLE_MAP.size();
+	  int temp = key.hashCode();
+	  int i = 0;
+	  if(temp != Integer.MIN_VALUE){
+	    i = Math.abs(temp) % TEST_TABLE_MAP.size();
+	  }else{
+	    i = Integer.MIN_VALUE % TEST_TABLE_MAP.size();  
+	  }
+		// long i = Math.abs((key.hashCode())) % TEST_TABLE_MAP.size();
 		return TEST_TABLE_MAP.get((int) i);
 	}
 	
