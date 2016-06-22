@@ -1,6 +1,7 @@
 package annotation;
 
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.HashSet;
+import java.util.Set;
 
 public class AppleTest {
 
@@ -32,12 +33,46 @@ public class AppleTest {
 //    String r = new String(str.getBytes(Charset.forName("UTF-8")), Charset.forName("UTF-8"));
 //    System.out.println(r);
     
-   
-    
-   
-    
   }
 
+  
+  public static void setOpertion(String[] args) {
+    Set<Integer> result = new HashSet<Integer>();
+    Set<Integer> set1 = new HashSet<Integer>(){
+      private static final long serialVersionUID = 1L;
+      {
+        add(1);
+        add(3);
+        add(5);
+      }
+      
+    };
+     
+    Set<Integer> set2 = new HashSet<Integer>(){
+      private static final long serialVersionUID = 1L;
+      {
+        add(1);
+        add(2);
+        add(3);
+      }
+     };
+     
+    result.clear();
+    result.addAll(set1);
+    result.retainAll(set2);
+    System.out.println("交集："+result);
+     
+    result.clear();
+    result.addAll(set1);
+    result.removeAll(set2);
+    System.out.println("差集："+result);
+     
+    result.clear();
+    result.addAll(set1);
+    result.addAll(set2);
+    System.out.println("并集："+result);
+     
+}
   
   public static void c(Object key) {
     if(key instanceof Long || key instanceof Integer || key instanceof Short){
