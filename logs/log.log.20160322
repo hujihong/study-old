@@ -1,0 +1,46 @@
+03-22 15:00:01.206 INFO AbstractApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@340f438e: startup date [Tue Mar 22 15:00:01 CST 2016]; root of context hierarchy
+03-22 15:00:01.262 INFO XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [spring-cache.xml]
+03-22 15:00:01.623 INFO AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+03-22 15:00:01.692 INFO AbstractApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2fd1433e: startup date [Tue Mar 22 15:00:01 CST 2016]; root of context hierarchy
+03-22 15:00:01.693 INFO XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [spring-cache.xml]
+03-22 15:00:01.730 INFO AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+03-22 15:00:01.741 INFO AccountService1 - real querying db... accountName
+03-22 15:00:01.742 INFO AccountService1 - get from cache... accountName
+03-22 15:00:01.742 INFO AccountService1Test - after reload ....
+03-22 15:00:01.742 INFO AccountService1 - real querying db... accountName
+03-22 15:00:01.742 INFO AccountService1 - get from cache... accountName
+03-22 15:09:20.614 INFO AbstractApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5b464ce8: startup date [Tue Mar 22 15:09:20 CST 2016]; root of context hierarchy
+03-22 15:09:20.664 INFO XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [spring-cache2.xml]
+03-22 15:09:21.096 INFO AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+03-22 15:09:21.333 INFO AccountService2Test - first query...
+03-22 15:09:21.351 INFO AccountService2 - real querying account... accountName
+03-22 15:09:21.352 INFO AccountService2 - real querying db... accountName
+03-22 15:09:21.353 INFO AccountService2Test - second query...
+03-22 15:44:32.295 INFO AbstractApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5b464ce8: startup date [Tue Mar 22 15:44:32 CST 2016]; root of context hierarchy
+03-22 15:44:32.357 INFO XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [spring-cache2.xml]
+03-22 15:44:32.865 INFO AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+03-22 15:44:33.149 INFO AccountService3 - real querying account... accountName1
+03-22 15:44:33.149 INFO AccountService3 - real querying db... accountName1
+03-22 15:44:33.151 INFO AccountService3Test - com.hujh.cache.Account@50029372
+03-22 15:44:33.151 INFO AccountService3 - real querying account... accountName2
+03-22 15:44:33.151 INFO AccountService3 - real querying db... accountName2
+03-22 15:44:33.151 INFO AccountService3Test - com.hujh.cache.Account@e3b3b2f
+03-22 15:44:33.152 INFO AccountService3 - real update db...accountName2
+03-22 15:44:33.187 INFO AccountService3Test - com.hujh.cache.Account@50029372
+03-22 15:44:33.187 INFO AccountService3 - real querying account... accountName2
+03-22 15:44:33.187 INFO AccountService3 - real querying db... accountName2
+03-22 15:44:33.187 INFO AccountService3Test - com.hujh.cache.Account@30b6ffe0
+03-22 15:47:23.290 INFO AbstractApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5b464ce8: startup date [Tue Mar 22 15:47:23 CST 2016]; root of context hierarchy
+03-22 15:47:23.344 INFO XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [spring-cache2.xml]
+03-22 15:47:23.764 INFO AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+03-22 15:47:24.017 INFO AccountService3 - real querying account... accountName1
+03-22 15:47:24.017 INFO AccountService3 - real querying db... accountName1
+03-22 15:47:24.018 INFO AccountService3Test - Account [id=0, name=accountName1]
+03-22 15:47:24.018 INFO AccountService3 - real querying account... accountName2
+03-22 15:47:24.018 INFO AccountService3 - real querying db... accountName2
+03-22 15:47:24.019 INFO AccountService3Test - Account [id=0, name=accountName2]
+03-22 15:47:24.019 INFO AccountService3 - real update db...accountName2
+03-22 15:47:24.041 INFO AccountService3Test - Account [id=0, name=accountName1]
+03-22 15:47:24.042 INFO AccountService3 - real querying account... accountName2
+03-22 15:47:24.042 INFO AccountService3 - real querying db... accountName2
+03-22 15:47:24.042 INFO AccountService3Test - Account [id=0, name=accountName2]
