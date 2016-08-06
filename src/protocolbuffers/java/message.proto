@@ -1,0 +1,21 @@
+
+package tutorial;
+ 
+option java_package = "com.example.tutorial";
+option java_outer_classname = "MessageProto";
+
+message SearchRequest {
+	required string query = 1;
+	optional int32 page_number = 2;
+	optional int32 result_per_page = 3;
+	optional bytes bins = 4;
+}
+
+message SearchResponse {
+	required string resNum = 1;
+	optional int32 page_number = 2;
+	optional int32 result_per_page = 3;
+}
+
+
+
