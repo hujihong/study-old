@@ -3,6 +3,7 @@ import java.io.FileInputStream;
  
 import com.example.tutorial.AddressBookProtos.AddressBook;
 import com.example.tutorial.AddressBookProtos.Person;
+import com.google.protobuf.TextFormat;
  
 class ListPeople {
   // Iterates though all people in the AddressBook and prints info about them.
@@ -41,9 +42,9 @@ class ListPeople {
     String file = "/Users/hujh/git/study/src/protocolbuffers/java/com/example/tutorial/1.dat";
     
     // Read the existing address book.
-    AddressBook addressBook =
-      AddressBook.parseFrom(new FileInputStream(file));
- 
-    Print(addressBook);
+    AddressBook addressBook = AddressBook.parseFrom(new FileInputStream(file));
+    // System.out.println(addressBook.toString());
+    System.out.println(TextFormat.shortDebugString(addressBook));
+    // Print(addressBook);
   }
 }

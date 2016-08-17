@@ -55,6 +55,26 @@ public final class MessageProto {
      * <code>optional bytes bins = 4;</code>
      */
     com.google.protobuf.ByteString getBins();
+
+    // repeated string list = 5;
+    /**
+     * <code>repeated string list = 5;</code>
+     */
+    java.util.List<java.lang.String>
+    getListList();
+    /**
+     * <code>repeated string list = 5;</code>
+     */
+    int getListCount();
+    /**
+     * <code>repeated string list = 5;</code>
+     */
+    java.lang.String getList(int index);
+    /**
+     * <code>repeated string list = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getListBytes(int index);
   }
   /**
    * Protobuf type {@code tutorial.SearchRequest}
@@ -127,6 +147,14 @@ public final class MessageProto {
               bins_ = input.readBytes();
               break;
             }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+                list_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              list_.add(input.readBytes());
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -135,6 +163,9 @@ public final class MessageProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+          list_ = new com.google.protobuf.UnmodifiableLazyStringList(list_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -258,11 +289,42 @@ public final class MessageProto {
       return bins_;
     }
 
+    // repeated string list = 5;
+    public static final int LIST_FIELD_NUMBER = 5;
+    private com.google.protobuf.LazyStringList list_;
+    /**
+     * <code>repeated string list = 5;</code>
+     */
+    public java.util.List<java.lang.String>
+        getListList() {
+      return list_;
+    }
+    /**
+     * <code>repeated string list = 5;</code>
+     */
+    public int getListCount() {
+      return list_.size();
+    }
+    /**
+     * <code>repeated string list = 5;</code>
+     */
+    public java.lang.String getList(int index) {
+      return list_.get(index);
+    }
+    /**
+     * <code>repeated string list = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getListBytes(int index) {
+      return list_.getByteString(index);
+    }
+
     private void initFields() {
       query_ = "";
       pageNumber_ = 0;
       resultPerPage_ = 0;
       bins_ = com.google.protobuf.ByteString.EMPTY;
+      list_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -292,6 +354,9 @@ public final class MessageProto {
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         output.writeBytes(4, bins_);
       }
+      for (int i = 0; i < list_.size(); i++) {
+        output.writeBytes(5, list_.getByteString(i));
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -316,6 +381,15 @@ public final class MessageProto {
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(4, bins_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < list_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(list_.getByteString(i));
+        }
+        size += dataSize;
+        size += 1 * getListList().size();
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -441,6 +515,8 @@ public final class MessageProto {
         bitField0_ = (bitField0_ & ~0x00000004);
         bins_ = com.google.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000008);
+        list_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -485,6 +561,12 @@ public final class MessageProto {
           to_bitField0_ |= 0x00000008;
         }
         result.bins_ = bins_;
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          list_ = new com.google.protobuf.UnmodifiableLazyStringList(
+              list_);
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.list_ = list_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -514,6 +596,16 @@ public final class MessageProto {
         }
         if (other.hasBins()) {
           setBins(other.getBins());
+        }
+        if (!other.list_.isEmpty()) {
+          if (list_.isEmpty()) {
+            list_ = other.list_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensureListIsMutable();
+            list_.addAll(other.list_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -718,6 +810,99 @@ public final class MessageProto {
       public Builder clearBins() {
         bitField0_ = (bitField0_ & ~0x00000008);
         bins_ = getDefaultInstance().getBins();
+        onChanged();
+        return this;
+      }
+
+      // repeated string list = 5;
+      private com.google.protobuf.LazyStringList list_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureListIsMutable() {
+        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+          list_ = new com.google.protobuf.LazyStringArrayList(list_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+      /**
+       * <code>repeated string list = 5;</code>
+       */
+      public java.util.List<java.lang.String>
+          getListList() {
+        return java.util.Collections.unmodifiableList(list_);
+      }
+      /**
+       * <code>repeated string list = 5;</code>
+       */
+      public int getListCount() {
+        return list_.size();
+      }
+      /**
+       * <code>repeated string list = 5;</code>
+       */
+      public java.lang.String getList(int index) {
+        return list_.get(index);
+      }
+      /**
+       * <code>repeated string list = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getListBytes(int index) {
+        return list_.getByteString(index);
+      }
+      /**
+       * <code>repeated string list = 5;</code>
+       */
+      public Builder setList(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureListIsMutable();
+        list_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string list = 5;</code>
+       */
+      public Builder addList(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureListIsMutable();
+        list_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string list = 5;</code>
+       */
+      public Builder addAllList(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureListIsMutable();
+        super.addAll(values, list_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string list = 5;</code>
+       */
+      public Builder clearList() {
+        list_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string list = 5;</code>
+       */
+      public Builder addListBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureListIsMutable();
+        list_.add(value);
         onChanged();
         return this;
       }
@@ -1393,12 +1578,13 @@ public final class MessageProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\rmessage.proto\022\010tutorial\"Z\n\rSearchReque" +
+      "\n\rmessage.proto\022\010tutorial\"h\n\rSearchReque" +
       "st\022\r\n\005query\030\001 \002(\t\022\023\n\013page_number\030\002 \001(\005\022\027" +
-      "\n\017result_per_page\030\003 \001(\005\022\014\n\004bins\030\004 \001(\014\"N\n" +
-      "\016SearchResponse\022\016\n\006resNum\030\001 \002(\t\022\023\n\013page_" +
-      "number\030\002 \001(\005\022\027\n\017result_per_page\030\003 \001(\005B$\n" +
-      "\024com.example.tutorialB\014MessageProto"
+      "\n\017result_per_page\030\003 \001(\005\022\014\n\004bins\030\004 \001(\014\022\014\n" +
+      "\004list\030\005 \003(\t\"N\n\016SearchResponse\022\016\n\006resNum\030" +
+      "\001 \002(\t\022\023\n\013page_number\030\002 \001(\005\022\027\n\017result_per" +
+      "_page\030\003 \001(\005B$\n\024com.example.tutorialB\014Mes" +
+      "sageProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -1410,7 +1596,7 @@ public final class MessageProto {
           internal_static_tutorial_SearchRequest_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_tutorial_SearchRequest_descriptor,
-              new java.lang.String[] { "Query", "PageNumber", "ResultPerPage", "Bins", });
+              new java.lang.String[] { "Query", "PageNumber", "ResultPerPage", "Bins", "List", });
           internal_static_tutorial_SearchResponse_descriptor =
             getDescriptor().getMessageTypes().get(1);
           internal_static_tutorial_SearchResponse_fieldAccessorTable = new
