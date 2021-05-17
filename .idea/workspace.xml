@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3cf40b13-ea88-468d-a046-989ab26b173c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sample.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample.xml" afterDir="false" />
-    </list>
+    <list default="true" id="3cf40b13-ea88-468d-a046-989ab26b173c" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,12 +15,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/sample.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="725">
+            <state relative-caret-position="231">
               <caret line="25" column="15" lean-forward="true" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/algorithm/java/ch01/MyArray.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/javaa/java/chapter01/AutoBoxReflect.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-244" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mongodb/java/com/githut/mongodb/MongoDBJDBC.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-218" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/protostuff/src/com/hujh/ProtoStuffSerializerUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-56" />
           </provider>
         </entry>
       </file>
@@ -63,50 +87,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -144,16 +125,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1621262639818</updated>
-      <workItem from="1621262641778" duration="572000" />
+      <workItem from="1621262641778" duration="1287000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="572000" />
+    <option name="totallyTimeSpent" value="1287000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-289" y="-1055" width="1920" height="1055" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="Image Layers" />
@@ -168,7 +148,7 @@
       <window_info anchor="bottom" id="FindBugs-IDEA" />
       <window_info anchor="bottom" id="Analysis" />
       <window_info anchor="bottom" id="GraphQL" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32976446" />
       <window_info anchor="bottom" id="Sequence" />
       <window_info anchor="bottom" id="Tool Output" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
@@ -214,9 +194,27 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/resources/sample.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
+        <state relative-caret-position="231">
           <caret line="25" column="15" lean-forward="true" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithm/java/ch01/MyArray.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javaa/java/chapter01/AutoBoxReflect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-244" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mongodb/java/com/githut/mongodb/MongoDBJDBC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-218" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/protostuff/src/com/hujh/ProtoStuffSerializerUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-56" />
       </provider>
     </entry>
   </component>
